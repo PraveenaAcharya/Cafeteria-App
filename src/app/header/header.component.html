@@ -1,0 +1,28 @@
+<header>
+  <nav>
+    <div class="logo hideOnMobile ">
+      <img src="assets/logo.png" alt="Food Delivery Logo" />
+      <span class="brand-name">RitianFoodzs</span>
+    </div >
+   
+    <ul class="sidebar"  [ngClass]="{'visible': sidebarVisible, 'hidden': !sidebarVisible}">
+      <li (click)="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <a href=" ">Home</a>
+      <a href="About">About</a>
+      <a href="Menu">Menu</a>
+      <a href="Offer">Offer</a>
+      <a href="Contact">Contact</a>
+    </ul>
+    <ul class="barbar hideOnMobile" >
+      <a href=" ">Home</a>
+      <a href="About">About</a>
+      <a href="Menu">Menu</a>
+      <a href="Offer">Offer</a>
+      <a href="Contact">Contact</a>
+      <li class="menu-button" (click)="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+    <div class="cart ">
+      <img src="assets/cart.png" alt="Food Delivery Logo" />
+    </div>
+  </nav>
+</header>

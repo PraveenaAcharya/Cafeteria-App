@@ -1,0 +1,27 @@
+
+<!-- app.component.html -->
+<div class="container">
+    
+  
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" >&times;</a>
+      <div class="product-details">
+        <img [src]="product.imageUrl" alt="Product Image" class="product-image">
+        <h2 class="product-title">{{product.name}}</h2>
+        <div class="detail">
+          <span setBackground>Small</span> 
+          <span setBackground>Medium</span>
+          <span setBackground>Large</span>
+        </div>
+        <hr>
+        <p class="product-description">{{product.description}}</p>
+        <p class="product-price">${{product.price}}</p>
+        <button class="buy-button" *ngIf="product.stock>0; else notifyme" Apphover>Add to Cart</button>
+        <ng-template #notifyme>
+          <button class="buy-button">Notify me</button>
+        </ng-template>
+        
+      </div>
+    </div>
+  </div>
+  

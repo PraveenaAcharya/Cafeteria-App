@@ -1,0 +1,40 @@
+<app-filter [all]="totalProductCount" [inStock]="totalProductInStock" [OutStock]="totalProductOutStock" (selectedFilterRadioButtonChange)="selectedFilterChange($event)"></app-filter>
+<div class="products-container">
+  <!-- <div *ngFor="let prod of products" (click)="selectedProduct=prod">
+    <div *ngIf="searchText ==='' || prod.name.toLowerCase().includes(searchText)">
+      <app-pro  [product]="prod" *ngIf="selectedradio==='All' || (selectedradio ==='true' && prod.stock>0) || (selectedradio ==='false' && prod.stock===0)" ></app-pro>
+    </div>
+    
+  </div> -->
+  <ng-container *ngFor="let prod of products" >
+    <ng-container *ngIf="searchText ==='' || prod.name.toLowerCase().includes(searchText)">
+      <app-pro  
+      [product]="prod" 
+      *ngIf="selectedradio==='All' || (selectedradio ==='true' && prod.stock>0) || (selectedradio ==='false' && prod.stock===0)" 
+      (click)="selectedProduct=prod"></app-pro>
+    </ng-container>  
+  </ng-container>
+</div>
+<!-- <div class="featured-container">
+  <div class="headi">
+    <p class="featured-items">New Arrivals</p>
+  </div>
+  
+  <div class="featured">
+    <app-featured>
+      <h3 class="heading2">New Arrival in Burger</h3>
+      <button class="call-to-action">Learn More about Burger</button>
+    </app-featured>
+  <app-featured>
+    <h3 class="heading2">New Arrival in Momo</h3>
+    <button class="call-to-action">Learn More about Momo</button>
+  </app-featured>
+  <app-featured>
+    <h3 class="heading2">New Arrival in sandwhich</h3>
+    <button class="call-to-action">Learn More about sandwhich</button>
+  </app-featured>
+
+  </div>
+  
+</div> -->
+

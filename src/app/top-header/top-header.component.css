@@ -1,0 +1,84 @@
+/* top-header.component.css */
+
+/* Default (Mobile) Styles */
+.top-header {
+    background-color: #ff6f61; /* Background color */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-aligns text */
+    padding: 8px 0; /* Vertical padding */
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Aligns it to the top of the page */
+    width: 100%; /* Full width of the viewport */ /* Keeps it above other elements */
+    font-family: Arial, sans-serif; /* Sets font style */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #9f2a15; /* Background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 5px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+}
+
+.arrow-down {
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position it below the button */
+    left: 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.dropdown-content p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Show the dropdown on hover (mobile) */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* PC Styles (when 'pc' class is applied) */
+:host.pc .top-header {
+    /* Adjust padding for PC if needed */
+}
+
+:host.pc .dropdown-button {
+    font-size: 18px; /* Larger font size for PC */
+}
+
+:host.pc .dropdown-content {
+    display: none; /* Hide on hover by default for PC */
+}
+
+:host.pc .dropdown-button:focus + .dropdown-content,
+:host.pc .dropdown-content:hover {
+    display: block; /* Show on focus or hover for PC */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .dropdown-button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}

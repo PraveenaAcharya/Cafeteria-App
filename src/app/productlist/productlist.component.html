@@ -1,0 +1,16 @@
+<!-- string interpolation exampple -- transfer of data from component class to its view template -->
+ <!-- in {{}} we can write any property expression or method and also typescript method like toFixed method to show only 2 digit after point -->
+<!-- [src]="any typescript expression" -- properrt binding syntax(from component to view)-->
+ <!-- <button [disabled] ="!(product.stock>0 ?)"></button>  for html attribute like disabled, hidden, checked uspe uppr proprty binding lagaya aur ek typescript expression likhi, propert binding work nhi krega--> 
+  <!-- <input type="text" [name]="name" (input)="onNameChange(&event)"> --(input)-event binding  -->
+   <!-- onNameChange(event  any){
+    console.log(event.target.value)
+    this.name = event.target.value;
+   } -->
+<!-- button pr toh hamesa evevnt binding hi lagega -->
+ <div class="container">
+   <!-- non related componennt communication -->
+    <app-search (searchTextChange)="setSearchText($event)"></app-search>
+    <app-products [searchText]="searchText" #productListComponent></app-products>
+    <app-product-detail *ngIf="productListComponent.selectedProduct" [ProductComp]="ProductComponent"></app-product-detail>
+ </div>

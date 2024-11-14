@@ -1,0 +1,12 @@
+<div class="search-container">
+    <div class="search-bar">
+      <!-- template reference variable -- jab hame referenec aur data pass karna hai dusre html elemtnt ko--searchInput--jo bhi ham search karege vo hoga isme  -->
+      <input type="text" class="search-input" #searchInput/> 
+      <button class="btn search-button" (click)="onNameChange()">Search</button>
+    </div>
+    
+    <div class="search-results">
+      <p *ngIf="searchText !== ''">Search result for: <span>{{ searchText }}</span></p>
+    </div>
+  </div>
+  

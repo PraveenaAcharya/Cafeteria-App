@@ -1,0 +1,32 @@
+.food-featured {
+    background-color: #fff; /* Background color for individual items */
+    border: 1px solid #ddd; /* Border for individual items */
+    padding: 10px; /* Padding inside each item */
+    margin: 10px; /* Margin around items */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text inside items */
+    width: 200px; /* Set a fixed width for alignment */
+  }
+  
+  .food-featured .description {
+    font-size: 0.9em; /* Slightly smaller font for the description */
+    margin: 10px 0; /* Margin around the description */
+  }
+  
+  .food-featured .call-to-action {
+    background-color: #ff6f61; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for the button */
+  }
+  
+  @media (max-width: 768px) {
+    .food-featured {
+      width: 100%; /* Full width on smaller screens */
+      margin: 10px 0px; /* More spacing between items on mobile */
+    }
+  }
+  

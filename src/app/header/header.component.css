@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+header {
+ width: 100%;
+  margin-top: 32px;
+  padding: 10px 0px;
+  background-color: white;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.374);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction:column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+.sidebar.visible {
+  display: flex; /* Show sidebar when the visible class is applied */
+  list-style: none;
+}
+
+.sidebar.hidden {
+  display: none; /* Ensure hidden class hides the sidebar */
+}
+
+nav {
+  width: 100%;
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.logo {
+  padding-left: 19px;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6f61;
+}
+
+button{
+  padding: 5px 10px;
+}
+
+
+
+
+nav .barbar {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ff6f61;
+  
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+.sidebar li{
+  width: 100%;
+  
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}

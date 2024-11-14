@@ -1,0 +1,47 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.featured-container {
+  background-color: #ff6f61; /* Background color for the featured section */
+  padding: 20px; /* Spacing inside the container */
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.featured{
+  position: relative; /* For absolute positioning of items */
+  display: flex; /* Align children horizontally */
+  justify-content: flex-end; /* Align items to the end */
+
+}
+p{
+  margin-top: 40px;
+}
+
+.featured-container .featured-items {
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  
+}
+
+
+@media (max-width: 768px) {
+  .featured-container {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items horizontally */
+  }
+}
+ .call-to-action {
+  background-color: #ff6f61; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for the button */
+}
